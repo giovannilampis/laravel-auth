@@ -28,4 +28,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+// localhost:8000/admin/----
+// localhost:8000/admin/posts
+// localhost:8000/admin/posts/{post}
+// localhost:8000/admin/posts/create
+
+
 require __DIR__.'/auth.php';
