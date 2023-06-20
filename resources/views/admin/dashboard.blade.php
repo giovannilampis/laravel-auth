@@ -1,4 +1,4 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app')
 
 @section('content')
 <div class="container">
@@ -23,4 +23,10 @@
         </div>
     </div>
 </div>
+@endsection --}}
+
+@extends('layouts.dashboard')
+
+@section('content')
+    <h1 class="text-uppercase text-center">dashboard</h1>
 @endsection
