@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//localhost:8000
 Route::get('/', function () {
     return view('welcome');
 });
@@ -26,7 +27,8 @@ Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin')->group(f
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    //localhost:8000/admin
+    Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
 });
 
