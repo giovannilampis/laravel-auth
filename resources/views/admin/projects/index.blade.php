@@ -15,6 +15,9 @@
                       <h5 class="card-title">"{{ $project->subtitle }}"</h5>
                       <p class="card-text">"{{ $project->description }}"</p>
                       <a href="{{ $project->url }}" class="btn btn-primary">VISIT WEBSITE</a>
+                      <a href="{{ route('admin.projects.show', ['project'=>$project]) }}" class="btn btn-info">SHOW</a>
+                      <a href="{{ $project->url }}" class="btn btn-danger">DELETE</a>
+
                     </div>
                 </div>
             </div>

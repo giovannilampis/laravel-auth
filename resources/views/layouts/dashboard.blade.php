@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite('resources/js/app.js') 
-    <title>@yield('title')</title>
+    <title>{{ config('app.name', 'Laravel') }}</title>
+    
 </head>
 <body>
     
@@ -48,8 +49,7 @@
                     @endif
                     @else
                     <li class="nav-item">
-                        {{-- <a href="{{ route('admin.projects.index') }}" class="nav-link">Projects</a> --}}
-                        <a href="" class="nav-link">Projects</a>
+                        <a href="{{ route('admin.projects.index') }}" class="nav-link">Projects</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

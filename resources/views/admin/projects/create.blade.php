@@ -1,3 +1,7 @@
+@extends('layouts.dashboard')
+
+@section('content')
+
 @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -9,16 +13,9 @@
 @endif
 
 <div class="container">
-    <p class="text-center fs-2 my-5 text-uppercase">add a comic book to this collection</p>
-    <form action="{{ route('projects.store') }}" method="POST">
+    <p class="text-center fs-2 my-5 text-uppercase">add a project to this collection</p>
+    <form action="{{ route('admin.projects.store') }}" method="POST">
         @csrf
-        <div class="mb-3">
-          <label class="form-label">Title</label>
-          <input name="title" type="text" class="form-control @error('title') is-invalid @enderror">
-          @error('title')
-          <div class="alert alert-danger">{{ $message }}</div>
-          @enderror
-        </div>
         <div class="mb-3">
             <label class="form-label">Title</label>
             <input name="title" type="text" class="form-control @error('title') is-invalid @enderror">
@@ -45,3 +42,5 @@
     
       </form>
 </div>
+
+@endsection
