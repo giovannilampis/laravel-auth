@@ -20,21 +20,21 @@
         
         <div class="mb-3">
             <label class="form-label">Title</label>
-            <input name="title" type="text" class="form-control @error('title') is-invalid @enderror">
+            <input name="title" type="text" class="form-control @error('title') is-invalid @enderror" value="{{ $project->title}}">
             @error('title')
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror
         </div>
         <div class="mb-3">
             <label class="form-label">Subtitle</label>
-            <input name="subtitle" type="text" class="form-control @error('subtitle') is-invalid @enderror">
+            <input name="subtitle" type="text" class="form-control @error('subtitle') is-invalid @enderror" value="{{ $project->subtitle}}"">
             @error('subtitle')
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror
         </div>
         <div class="mb-3">
             <label class="form-label">Description</label>
-            <input name="description" type="text" class="form-control @error('description') is-invalid @enderror">
+            <input name="description" type="text" class="form-control @error('description') is-invalid @enderror" value="{{ $project->description}}">
             @error('description')
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror

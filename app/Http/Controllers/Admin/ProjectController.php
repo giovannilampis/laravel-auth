@@ -69,12 +69,25 @@ class ProjectController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  Project $project
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        //
+    public function update(Request $request, Project $project)
+    {   
+        $request->validate(
+            [
+            'title' => 'required|max:20'
+            ],
+            [
+            'title.required' => 'Il campo "Title" deve essere necessariamente riempito',
+            'title.max' => 'Bisogna scegliere un titolo composto da non più di 20 caratteri',
+            'title.unique' => "Non può essere scelto un titolo già assegnato ad un'altra rivista"
+            ]
+        );
+
+        $project->update($request->all());
+
+        return redirect()->route('admin.projects.show', compact('project'));
     }
 
     /**
