@@ -9,11 +9,12 @@
 
             <div class="col-3">
                 <div class="card" style=>
-                    <img src="..." class="card-img-top" alt="">
+                    <img src="{{ $projects->img_url }}" class="card-img-top" alt=""{{ $projects->title }}"">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <h5 class="card-title">"{{ $projects->title }}"</h5>
+                      <h5 class="card-title">"{{ $projects->subtitle }}"</h5>
+                      <p class="card-text">"{{ $projects->description }}"</p>
+                      <a href="{{ $project->url }}" class="btn btn-primary">VISIT WEBSITE</a>
                     </div>
                 </div>
             </div>
