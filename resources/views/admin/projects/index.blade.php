@@ -9,11 +9,11 @@
 
             <div class="col-3">
                 <div class="card" style=>
-                    <img src="{{ $projects->img_url }}" class="card-img-top" alt=""{{ $projects->title }}"">
+                    <img src="{{ $project->img_url }}" class="card-img-top" alt=""{{ $project->title }}"">
                     <div class="card-body">
-                      <h5 class="card-title">"{{ $projects->title }}"</h5>
-                      <h5 class="card-title">"{{ $projects->subtitle }}"</h5>
-                      <p class="card-text">"{{ $projects->description }}"</p>
+                      <h5 class="card-title">"{{ $project->title }}"</h5>
+                      <h5 class="card-title">"{{ $project->subtitle }}"</h5>
+                      <p class="card-text">"{{ $project->description }}"</p>
                       <a href="{{ $project->url }}" class="btn btn-primary">VISIT WEBSITE</a>
                     </div>
                 </div>
