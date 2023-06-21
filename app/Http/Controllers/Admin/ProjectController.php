@@ -39,7 +39,20 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate(
+            [
+            'title' => 'required|max:20'
+            ],
+            [
+            'title.required' => 'Il campo "Title" deve essere necessariamente riempito',
+            'title.max' => 'Bisogna scegliere un titolo composto da non più di 20 caratteri',
+            'title.unique' => "Non può essere scelto un titolo già assegnato ad un'altra rivista"
+            ]
+        );
+
+        Project::create($request->all());
+
+        return redirect()->route('admin.projects.index');
     }
 
     /**

@@ -48,8 +48,17 @@
                     </li>
                     @endif
                     @else
-                    <li class="nav-item">
-                        <a href="{{ route('admin.projects.index') }}" class="nav-link">Projects</a>
+                
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            PROJECTS
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('admin.projects.index') }}">{{__('List')}}</a>
+                            <a class="dropdown-item" href="{{ route('admin.projects.create') }}">{{__('Create')}}</a>
+                       
+                        </div>
                     </li>
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
