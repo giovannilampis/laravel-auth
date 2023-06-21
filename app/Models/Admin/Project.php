@@ -15,7 +15,5 @@ class Project extends Model
         "description",
         "url",
         "img_url",
-        "sale_date",
-        "type"
     ];
 }
