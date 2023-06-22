@@ -46,8 +46,6 @@
           <div id="fileHelpId" class="form-text">Help text</div>
         </div>
 
-    
-    
         <button type="submit" class="btn btn-primary">CREATE</button>
     
       </form>
