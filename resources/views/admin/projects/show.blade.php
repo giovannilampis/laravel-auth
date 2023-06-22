@@ -13,7 +13,7 @@
                 <div class="card-body">
                   <h5 class="card-title">{{ $project->title }}</h5>
                   <p class="card-text">{{ $project->description }}</p>
-                  <a href="{{ route('admin.projects.index') }}" class="btn btn-primary">INDEX</a>
+                  <a href="{{ route('admin.projects.index') }}" class="btn btn-info">INDEX</a>
                   <a href="{{ route('admin.projects.edit', ['project'=>$project]) }}" class="btn btn-primary">EDIT</a>
                   <form action="{{ route('admin.projects.destroy', ['project'=>$project]) }}" method="POST">
                     @method('DELETE')
