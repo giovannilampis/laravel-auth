@@ -14,7 +14,7 @@
 
 <div class="container">
     <p class="text-center fs-2 my-5 text-uppercase">add a project to this collection</p>
-    <form action="{{ route('admin.projects.store') }}" method="POST">
+    <form action="{{ route('admin.projects.store') }}" method="POST" enctype=”multipart/form-data”>
         @csrf
         <div class="mb-3">
             <label class="form-label">Title</label>
@@ -37,6 +37,16 @@
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror
         </div>
+
+        {{-- INPUT FILE --}}
+
+        <div class="mb-3">
+          <label for="project-cover-image" class="form-label">Project Image</label>
+          <input type="file" class="form-control" name="cover_image" id="project-cover-image" placeholder="" aria-describedby="fileHelpId">
+          <div id="fileHelpId" class="form-text">Help text</div>
+        </div>
+
+    
     
         <button type="submit" class="btn btn-primary">CREATE</button>
     
