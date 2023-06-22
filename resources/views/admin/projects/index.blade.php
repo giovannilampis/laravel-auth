@@ -16,7 +16,7 @@
                       <p class="card-text">"{{ $project->description }}"</p>
                       <a href="{{ $project->url }}" class="btn btn-primary">VISIT WEBSITE</a>
                       <a href="{{ route('admin.projects.show', ['project'=>$project]) }}" class="btn btn-info">SHOW</a>
-                      <form action="{{ route('admin.projects.destroy', ['project'=>$project]) }}">
+                      <form action="{{ route('admin.projects.destroy', ['project'=>$project]) }}" method="POST">
                             @method('DELETE')
                             @csrf
                             <button type="submit" class="btn btn-danger">DELETE</button>
